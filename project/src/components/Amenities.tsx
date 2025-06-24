@@ -104,7 +104,7 @@ const Amenities: React.FC = () => {
               <div>
                 <Waves className="w-12 h-12 mx-auto mb-4 text-blue-200" />
                 <h4 className="text-xl font-semibold mb-2">Waterfront Paradise</h4>
-                <p className="text-blue-100">Private beach, pool, and water sports</p>
+                <p className="text-blue-100"> Beach View, Pool,</p>
               </div>
               <div>
                 <Sparkles className="w-12 h-12 mx-auto mb-4 text-blue-200" />

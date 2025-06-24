@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
             ))}
-            <span className="ml-2 text-lg font-medium">Luxury Waterfront Resort</span>
+            <span className="ml-2 text-lg font-medium">Luxury Hotel Stay</span>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">
-          Experience the perfect blend of luxury and nature at Virginia's premier waterfront destination
+          Experience the perfect blend of luxury and nature at Virginia's premier destination
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">

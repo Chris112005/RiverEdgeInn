@@ -21,21 +21,22 @@ const AboutUs: React.FC = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-gray-800">Our Story</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Founded  by the Thompson family, Colonial Beach Inn began as a dream to create
-                a peaceful retreat where guests could unwind and soak in the charm of coastal living.
-                What started as a quaint seaside getaway has grown into Colonial Beach’s most beloved luxury escape.
+                The Days Inn in Colonial Beach, VA, now known as the River Edge Inn, was built on the former site of the grand Colonial Beach Hotel. 
+                The original hotel was dismantled in 1984, and the current 2-story, 60-room brick building was erected in 1989.
+                It's located on the Potomac River and the boardwalk, within walking distance of various amenities and attractions.
+
+                The Colonial Beach Hotel:
+                This historic hotel was a prominent landmark in Colonial Beach for many years before its demolition in 1984.
+                Construction of the Days Inn:
+                  The current Days Inn, now the River Edge Inn, was built on the site of the former hotel in 1989. 
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Our commitment to excellence, personalized service, and environmental stewardship 
-                has earned us numerous accolades and, more importantly, the loyalty of guests who 
-                return year after year to experience our unique blend of luxury and tranquility.
+                Modern Amenities:
+                The 60-room motel offers features like a pool, wireless internet, ample parking, and is situated on the boardwalk, offering views of the Potomac River.
+                Location and Accessibility:
+                The hotel is conveniently located near restaurants, shops, and a trolley stop, making it an ideal base for exploring Colonial Beach
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                At River Edge Inn, we believe that true hospitality comes from the heart. Every 
-                member of our dedicated team is passionate about creating memorable experiences 
-                that exceed expectations. From the moment you arrive until your departure, we're 
-                committed to making your stay extraordinary.
-              </p>
+
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
                 </div>

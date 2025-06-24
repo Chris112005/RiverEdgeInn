@@ -13,7 +13,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -37,25 +36,28 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   };
 
   const handleBookNow = () => {
-    window.open('https://booking.hotelkeyapp.com/v2/index.html#/booking/search?pc=1189&property_id=fe9bd381-de06-4c84-8321-fadbf1892d6c', '_blank');
+    window.open(
+      'https://booking.hotelkeyapp.com/v2/index.html#/booking/search?pc=1189&property_id=fe9bd381-de06-4c84-8321-fadbf1892d6c',
+      '_blank'
+    );
   };
 
   return (
     <>
       {/* Top contact bar */}
-      <div className="bg-blue-900 text-white py-2 text-sm">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
+      <div className="bg-blue-900 text-white text-sm py-2">
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-y-2 sm:gap-y-0">
+          <div className="flex flex-col sm:flex-row items-center gap-y-1 sm:gap-y-0 sm:space-x-6 text-center sm:text-left">
+            <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4" />
               <span>804-410-2024 / 804-410-2050</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
               <Mail className="w-4 h-4" />
               <span>colonialhospitalityinc@gmail.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
             <MapPin className="w-4 h-4" />
             <span>Colonial Beach, VA</span>
           </div>
@@ -63,9 +65,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       </div>
 
       {/* Main navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
+        }`}
+      >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -73,20 +77,24 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">RE</span>
               </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-800">River Edge Inn</h1>
+              <div className="leading-tight">
+                <h1 className="text-lg font-bold text-gray-800">
+                  River Edge Inn
+                </h1>
                 <p className="text-xs text-gray-600">Colonial Beach</p>
               </div>
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            {/* Desktop nav */}
+            <div className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-blue-600 ${
-                    activeSection === item.id ? 'text-blue-600' : 'text-gray-700'
+                  className={`text-sm font-medium transition duration-200 hover:text-blue-600 ${
+                    activeSection === item.id
+                      ? 'text-blue-600'
+                      : 'text-gray-700'
                   }`}
                 >
                   {item.label}
@@ -94,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               ))}
               <button
                 onClick={handleBookNow}
-                className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl"
+                className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition shadow hover:shadow-lg"
               >
                 Book Now
               </button>
@@ -103,23 +111,29 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-600 hover:text-gray-800"
+              className="lg:hidden text-gray-700 hover:text-gray-900 p-2"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile navigation menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t shadow-lg">
-            <div className="container mx-auto px-4 py-4">
+          <div className="lg:hidden bg-white border-t shadow-sm">
+            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left py-3 text-sm font-medium transition-colors duration-200 hover:text-blue-600 ${
-                    activeSection === item.id ? 'text-blue-600' : 'text-gray-700'
+                  className={`text-left text-sm font-medium w-full transition hover:text-blue-600 ${
+                    activeSection === item.id
+                      ? 'text-blue-600'
+                      : 'text-gray-700'
                   }`}
                 >
                   {item.label}
@@ -127,7 +141,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               ))}
               <button
                 onClick={handleBookNow}
-                className="w-full bg-amber-500 hover:bg-amber-600 text-white py-3 rounded-lg text-sm font-semibold mt-4 transition-colors duration-200"
+                className="bg-amber-500 hover:bg-amber-600 text-white py-2 rounded-md text-sm font-semibold"
               >
                 Book Now
               </button>
