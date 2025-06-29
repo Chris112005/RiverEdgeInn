@@ -105,7 +105,7 @@ const Gallery: React.FC = () => {
             </p>
           </div>
 
-          {/* Featured Video Section */}
+{/* Featured Video Section */}
 <div className="mb-12">
   <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
     <div className="aspect-video">
@@ -114,7 +114,7 @@ const Gallery: React.FC = () => {
         className="w-full h-full object-cover"
         poster="/images/Nightfront.jpg.jpeg"
       >
-        <source src="/images/tour.mp4" type="video/mp3" />
+        <source src="/images/tour-welcome.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -126,6 +126,7 @@ const Gallery: React.FC = () => {
     </div>
   </div>
 </div>
+
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center mb-12 gap-2">
             {categories.map((category) => (
