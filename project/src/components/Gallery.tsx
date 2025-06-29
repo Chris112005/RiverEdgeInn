@@ -114,7 +114,7 @@ const Gallery: React.FC = () => {
         className="w-full h-full object-cover"
         poster="/images/Nightfront.jpg.jpeg"
       >
-        <source src="/images/Tour (3).mp4" type="video/mp4" />
+        <source src="/images/tour.mp4" type="video/mp3" />
         Your browser does not support the video tag.
       </video>
     </div>
