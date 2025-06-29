@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           </div>
           <div className="flex flex-col items-center">
             <Coffee className="w-8 h-8 mb-2 text-blue-300" />
-            <span className="text-sm font-medium">Restaurant</span>
+            <span className="text-sm font-medium">Free Break-fast</span>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Address',
-      info: '123 Potomac Street, Colonial Beach, VA 22443',
+      info: '30 Colonial Ave, Colonial Beach, VA 22443',
       link: 'https://maps.app.goo.gl/vAPHDWTP9tA6vXGX7'
     },
     {

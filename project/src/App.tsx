@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'amenities', 'places', 'gallery', 'about-us', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120; // Adjusted for fixed navbar height
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -39,15 +39,18 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar activeSection={activeSection} />
-      <Hero />
-      <About />
-      <Amenities />
-      <Places />
-      <Gallery />
-      <AboutUs />
-      <Contact />
-      <Footer />
-      <Chatbot />
+      {/* Add top padding to account for fixed navbar - exactly 88px total height */}
+      <div style={{ paddingTop: '88px' }}>
+        <Hero />
+        <About />
+        <Amenities />
+        <Places />
+        <Gallery />
+        <AboutUs />
+        <Contact />
+        <Footer />
+        <Chatbot />
+      </div>
     </div>
   );
 }
